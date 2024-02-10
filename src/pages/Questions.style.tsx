@@ -5,10 +5,7 @@ export const QuestionWrapper = styled.div`
   flex-direction: column;
   padding: 1rem 2rem;
   justify-content: center;
-  height: 100vh;
   width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
 
   img {
     max-width: 400px;

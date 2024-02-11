@@ -21,6 +21,7 @@ const ActivityCard = (props: ActivityCardProps) => {
     padding: 0.8rem;
     border-radius: 1rem;
     background-color: rgb(248, 249, 253);
+    margin-top: 1rem;
 
     @media screen and (max-width: 500px) {
       gap: 0.5rem;

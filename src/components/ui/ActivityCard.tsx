@@ -15,12 +15,12 @@ const ActivityCard = (props: ActivityCardProps) => {
   const CardWrapper = styled.div`
     display: flex;
     flex-direction: row;
-    background-color: rgb(248, 249, 253);
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
     padding: 0.8rem;
     border-radius: 1rem;
-    align-items: center;
-    gap: 2rem;
-    flex-wrap: wrap;
+    background-color: rgb(248, 249, 253);
 
     @media screen and (max-width: 500px) {
       gap: 0.5rem;
@@ -30,7 +30,6 @@ const ActivityCard = (props: ActivityCardProps) => {
 
   const AvatarWrapper = styled.div`
     flex: 0 0 0px;
-    text-align: center;
 
     .activityPicture {
       border: 0.4rem solid white;
@@ -48,20 +47,20 @@ const ActivityCard = (props: ActivityCardProps) => {
 
   const ColumnWrapper = styled.div`
     flex: 2 0 0px;
-    text-align: start;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    text-align: start;
 
     h3 {
-      font-weight: 650;
       font-size: 1.4rem;
+      font-weight: 650;
       min-width: 6.5rem;
     }
 
     p {
-      color: rgb(168, 171, 186);
       min-width: 5.5rem;
+      color: rgb(168, 171, 186);
     }
 
     @media screen and (max-width: 500px) {
@@ -81,12 +80,13 @@ const ActivityCard = (props: ActivityCardProps) => {
   const ActivityType = styled.p`
     flex: 1 0 0px;
     margin: 0 0.5rem;
-    background-color: white;
-    text-align: center;
-    padding: 0.5rem;
-    border-radius: 2rem;
     font-size: 1.2rem;
     font-weight: 500;
+    text-align: center;
+    padding: 0.5rem;
+    background-color: white;
+    border-radius: 2rem;
+
     color: ${(props: any) => props.theme.main};
 
     @media screen and (max-width: 500px) {
@@ -103,7 +103,7 @@ const ActivityCard = (props: ActivityCardProps) => {
       case "Snack":
         return "purple";
       default:
-        return "yellow";
+        return "blue";
     }
   };
 

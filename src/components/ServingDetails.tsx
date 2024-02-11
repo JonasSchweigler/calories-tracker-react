@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import styled from "styled-components";
 import { Input, StyledSelect } from "./ui/Input";
 import { SelectChangeEvent } from "@mui/material/Select";
@@ -13,26 +12,41 @@ const ServingDetailsWrapper = styled.div`
   flex-wrap: wrap-reverse;
 `;
 
-export const ServingDetails = () => {
-  const [age, setAge] = useState("1");
+interface ServingDetailsProps {
+  servingSize: string;
+  setServingSize: (servingSize: string) => void;
+  servingSizes: string[];
+  quantity: number;
+  setQuantity: (value: number) => void;
+}
 
+export const ServingDetails = (props: ServingDetailsProps) => {
   const handleChange = (event: SelectChangeEvent<string>) => {
-    setAge(event.target.value);
+    props.setServingSize(event.target.value);
   };
 
   return (
     <ServingDetailsWrapper>
-      <Input placeholder='1.0' />
+      <Input
+        placeholder='1.0'
+        id='quantity'
+        value={props.quantity}
+        onChange={(e) => props.setQuantity(Number.parseInt(e.target.value))}
+      />
       <StyledSelect
-        value={age}
-        label='Age'
+        value={props.servingSize}
+        label='Serving Size'
         onChange={(e) => {
           handleChange(e as SelectChangeEvent<string>);
         }}
       >
-        <MenuItem value={"1"}>Burger small (100g)</MenuItem>
-        <MenuItem value={"2"}>Burger medium (200g)</MenuItem>
-        <MenuItem value={"3"}>Burger large (300g)</MenuItem>
+        {props.servingSizes.map((servingSize, index) => {
+          return (
+            <MenuItem key={index} value={index.toString()}>
+              {servingSize}
+            </MenuItem>
+          );
+        })}
       </StyledSelect>
     </ServingDetailsWrapper>
   );

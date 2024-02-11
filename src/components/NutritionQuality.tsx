@@ -15,15 +15,19 @@ export const NutritionQualityWrapper = styled.div`
   }
 `;
 
-export const NutritionQuality = () => {
+interface NutritionQualityProps {
+  avatar?: string;
+  description: string;
+}
+
+export const NutritionQuality = (props: NutritionQualityProps) => {
   return (
     <NutritionQualityWrapper>
-      <Avatar alt='Remy Sharp' src='https://i.pravatar.cc/150' />
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      </p>
+      <Avatar
+        alt='Remy Sharp'
+        src={props.avatar || "https://i.pravatar.cc/150"}
+      />
+      <p>{props.description}</p>
     </NutritionQualityWrapper>
   );
 };

@@ -17,6 +17,7 @@ const ActivityCard = (props: ActivityCardProps) => {
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
+    cursor: pointer;
     gap: 2rem;
     padding: 0.8rem;
     border-radius: 1rem;
@@ -40,6 +41,7 @@ const ActivityCard = (props: ActivityCardProps) => {
 
     @media screen and (max-width: 265px) {
       flex: 1 0 0px;
+      text-align: center;
       .activityPicture {
         text-align: center;
       }

@@ -24,3 +24,18 @@ export const OptionButton = styled.button`
     color: white;
   }
 `;
+
+export const RegisterButton = styled(OptionButton)`
+  background-color: #feba58;
+  color: white;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: #feba58;
+    color: white;
+  }
+
+  &:active {
+    background-color: black;
+  }
+`;

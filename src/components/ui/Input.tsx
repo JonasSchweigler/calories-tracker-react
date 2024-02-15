@@ -13,6 +13,13 @@ export const Input = styled.input`
   min-width: 80px;
 `;
 
+export const TextInput = styled(Input)`
+  color: black;
+  width: 100%;
+  border-radius: 0.8rem;
+  font-weight: 500;
+`;
+
 export const StyledSelect = styled(Select)`
   border: none;
   flex: 2;

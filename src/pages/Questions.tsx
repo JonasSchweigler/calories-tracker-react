@@ -6,8 +6,8 @@ import QuestionLogo from "../assets/question-logo.svg";
 function Questions() {
   return (
     <QuestionWrapper>
-      <img src={QuestionLogo} alt='logo' />
-      <div className='options-header'>
+      <img src={QuestionLogo} alt="logo" />
+      <div className="options-header">
         <h1>Your Goal?</h1>
         <p>Don't worry, you can change this later.</p>
       </div>

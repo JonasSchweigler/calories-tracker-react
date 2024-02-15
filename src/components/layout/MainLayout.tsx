@@ -1,4 +1,3 @@
-import React from "react";
 import { Outlet } from "react-router";
 import styled from "styled-components";
 
@@ -18,7 +17,7 @@ const Layout = styled.div`
 export const MainLayout = () => {
   return (
     <Layout>
-      <div className='layout'>
+      <div className="layout">
         <Outlet />
       </div>
     </Layout>

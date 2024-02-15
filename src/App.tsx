@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import { MainLayout } from "./components/layout/MainLayout";
 import { MealDetail } from "./pages/MealDetail";
 import Activities from "./pages/Activities";
+import Registration from "./pages/Registration";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/questions" element={<Questions />} />
         <Route path="/meal" element={<MealDetail />} />
         <Route path="/activities" element={<Activities />} />
+        <Route path="/registration" element={<Registration />} />
       </Route>
     </Routes>
   );

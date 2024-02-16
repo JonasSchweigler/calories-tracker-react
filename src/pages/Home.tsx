@@ -14,6 +14,7 @@ import {
 } from "firebase/firestore";
 import { useAuth } from "../context/AuthContext";
 import IUser from "../common/models/IUser";
+import { Stats } from "../components/Stats";
 
 function Home() {
   const [activities, setActivities] = useState<IActivity[]>([]);
@@ -98,15 +99,16 @@ function Home() {
   return (
     <HomeWrapper>
       <HomeHeader />
-      <div className="greet">
+      <div className='greet'>
         <h1>
           Good Morning <span>{user?.userName}</span>
         </h1>
       </div>
+      <Stats />
       <MealWrapper>
         <MealHeaderWrapper>
           <h2>Today's Activity</h2>
-          <a href="/activities">View All</a>
+          <a href='/activities'>View All</a>
         </MealHeaderWrapper>
         {activities.map((activity) => (
           <ActivityCard
